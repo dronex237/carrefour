@@ -1,0 +1,158 @@
+@media screen and (min-width:320px) and (max-width: 480px) {
+     /*************  responsive du header *********** */
+    
+     .up p{
+        display: none;
+    }
+    header .up .container {
+        position: relative;
+    }
+    header .up .container .icons{
+       position: absolute;
+       top: 0;
+       right: 0;
+       width:30%;
+       height: 100%;
+       padding-right: 10px;
+    }
+    header .main .menu{
+        display: flex;
+        width: 25%;
+        height: 60%;
+        border: 1px solid  red;
+        align-items: center;
+        justify-content: center;
+        margin-right: 6rem;
+        
+    }
+    
+    header .main .croix{
+        display: none;
+        width: 25%;
+        height: 60%;
+        border: 1px solid  red;
+        align-items: center;
+        justify-content: center;
+        margin-right: 6rem;
+    }
+    header .main .croix img{
+        width: 100%;
+        height: 100%;
+     
+    }
+    header .main .menu img{
+        height: 80%;
+        width: 80%;
+    }
+    .main{
+        /* border: 4px solid green; */
+    }
+    .main .container{
+       /*  border: 1px solid black; */
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+       
+    }
+    .main .container ul{
+      /*   border: 1px solid yellow; */
+        flex-direction: column;
+        display: none;
+        background-color: #f3f3f3;
+        position: absolute;
+       /*  top: 60px; */
+        left: 0;
+        width: 100%;
+        height: 200%;
+        padding: 20px;
+        z-index: 500;
+    }
+    .main .container ul .l1:hover ul{
+        display: none;
+    }
+    .main .container ul .l1:active ul{
+        display: none;
+  
+    }
+    .main .container ul .l2:hover ul{
+        display: none;
+    }
+    .main .container ul .l2:active ul{
+        display: none;
+  
+    }
+    .main .container ul .l3:hover ul{
+        display: none;
+    }
+    .main .container ul .l3:active ul{
+        display: none;
+  
+    }
+    .main .container ul .c1:hover{
+        background-color: white;
+    }
+    .main .container ul .c1::after{
+        display: none;
+    }
+    .main .container ul li{
+        width: 100%;
+       /*  border: 1px solid blue; */
+    }
+    .main .container ul .c1 a{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+     /*    border: 1px solid red; */
+    }
+    .main .container ul li{
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .main .container ul.active{
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        
+    }
+    .main .container .recherche{
+        display: none;
+    }
+    .main .container .logo{
+        display: none;  
+    }
+    .main .container .logoresp{
+        border: 1px solid red;
+        width: 25%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main .container .logoresp img{
+        height: 100%;
+        width: 100%;
+    }
+    .main .container .loupe-r{
+        border: 1px solid red;
+        width: 20%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+    /*  ********  fin du responsive du header ******** */
+
+
+    
+
+}

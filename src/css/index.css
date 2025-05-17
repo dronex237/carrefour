@@ -1,0 +1,945 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*  ***************  styles pour le header */
+header{
+    border: 1px solid red;
+    height: 25vh;
+    position: relative; /*  */
+}
+header .up{
+    border: 1px solid blue;
+    height: 6vh;    
+    background-color: #005baa;
+    transition: opacity 0.3s ease-in-out;
+}
+header .up.hidden{
+    opacity: 0;
+}
+
+header .up .container{
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+header .up .container .icons{
+    width:13%;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px    ;
+}
+
+header .up .container .icons div{
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    
+}
+header .up .container .icons div a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header .up .container .icons div img{
+    height: 60%;
+    width: 60%;
+}
+header .up .container p{
+    color: white;
+    font-size: 0.8rem;
+    margin-left: 10rem;
+}
+
+
+.main{
+    border: 1px solid blue;
+    height: 19vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;/*  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+
+}
+.main .menu{
+    width: 20%;
+    height: 60%;
+    display: none;
+    
+}
+.main .croix{
+    width: 20%;
+    height: 60%;
+    display: none;
+    
+}
+.main.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.main .container{
+    border: 1px solid black;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+   
+}
+.main .container .logo{
+    /* border: 1px solid red; */
+    width: 20%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 64px;
+}
+.main .container .logoresp{
+    /* border: 1px solid red; */
+    display: none;
+}
+.main .container .logo a{
+    height: 100%;
+    width: 100%;
+}
+.main .container .logo img{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+}
+.main .container ul{
+    /* border: 1px solid red; */
+    width: 55%;
+    height: 60%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+.main .container ul li{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* ***** card descendant ******* */
+.main .container ul .l1 ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f3f3f3;
+    /* border: 1px solid #ddd; */
+    width: 100%;
+    height: 300%;
+    transition: display 0.1s ease-in-out  ; 
+}
+.main .container ul .l1 ul .liste a{
+    text-decoration: none;
+    color: black ;
+}
+.main .container ul .l1:hover ul{
+    display: flex;
+    flex-direction: column;  
+    transition-delay: 0.3s;
+}
+.main .container ul .l1:hover ul li{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.main .container ul .l1:hover ul .liste:hover{
+    background-color: white; 
+}
+.main .container ul .l1:hover ul .liste:hover a{
+    color: #185BAA;
+}
+/* ****************************** */
+.main .container ul .l2 ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f3f3f3;
+   /*  border: 1px solid #ddd; */
+    width: 100%;
+    height: 700%;
+    transition: display 0.1s ease-in-out  ; 
+}
+.main .container ul .l2 ul .liste a{
+    text-decoration: none;
+    color: black ;
+}
+.main .container ul .l2:hover ul{
+    display: flex;
+    flex-direction: column;  
+    transition-delay: 0.3s;
+}
+.main .container ul .l2:hover ul li{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.main .container ul .l2:hover ul .liste:hover{
+    background-color: white; 
+}
+.main .container ul .l2:hover ul .liste:hover a{
+    color: #185BAA;
+}
+/* ****************************** */
+.main .container ul .l3 ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f3f3f3;
+   /*  border: 1px solid #ddd; */
+    width: 100%;
+    height: 200%;
+    transition: display 0.1s ease-in-out  ; 
+}
+.main .container ul .l3 ul .liste a{
+    text-decoration: none;
+    color: black ;
+}
+.main .container ul .l3:hover ul{
+    display: flex;
+    flex-direction: column;  
+    transition-delay: 0.3s;
+}
+.main .container ul .l3:hover ul li{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.main .container ul .l3:hover ul .liste:hover{
+    background-color: white; 
+}
+.main .container ul .l3 :hover ul .liste:hover a{
+    color: #185BAA;
+}
+/* ****************************** */
+/*  ******** fin card descendant ********* */
+.main .container ul .c1 a{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .container ul .c1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: #005baa;
+    transition: width 0.3s ease-in-out;
+}
+.main .container ul .c1:hover::after{
+    width: 100%;
+    
+}
+.main .container ul .c1:hover a{
+    color:#185BAA ;
+}
+
+.main .container .recherche{
+    border: 1px solid red;
+    width: 15%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.main .container .recherche .container{
+    border: 1px solid gray;
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+    display: flex;
+}
+.main .container .recherche .container .loupe{
+    border: 1px solid blue;
+    width: 17%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.main .container .recherche .container .loupe img{
+    width: 50%;
+    height: 50%;
+}
+.main .container .recherche .container .input{
+    border: 1px solid red;
+    width: 83%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+}
+.main .container .recherche .container .input input{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+}
+.main .container .loupe-r{
+    border: 1px solid red;
+    width: 15%;
+    height: 60%;
+    display: none;
+}
+
+/* ************** style pour la section1 ************* */
+
+.sec1{
+    height: 75vh;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.sec1 .container{
+    height: 98%;
+    width: 90%;
+    border: 1px solid black;
+    display: flex;
+    gap: 20px;
+}
+.sec1 .container .left{
+    height: 100%;
+    width: 60%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+
+}
+.sec1 .container .left .banner{
+    height: 50%;
+    width: 100%;
+    border: 1px solid black;
+}
+.sec1 .container .left .banner img{
+    height: 100%;
+    width: 100%;
+}
+.sec1 .container .right{
+    height: 100%;
+    width: 40%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.sec1 .container .act1{
+    height: 6%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    gap: 5px;
+}
+.sec1 .container .act1 .left-act{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.sec1 .container .act1 .left-act a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.sec1 .container .act1 .left-act a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.sec1 .container .act1 .right-act{
+    height: 100%;
+    width: 70%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sec1 .container .act{
+    height: 18%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    gap: 5px;
+}
+.sec1 .container .act .left-act{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black;
+}
+.sec1 .container .act .left-act a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.sec1 .container .act .left-act a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.sec1 .container .act .right-act{
+    height: 100%;
+    width: 70%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.sec1 .container .act .right-act a{
+    text-decoration: none;
+    color: black;
+}
+.sec1 .container .act .right-act p{
+    height: 60%;
+}
+.sec1 .container .act .right-act .down{
+    height: 40%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.sec1 .container .act .right-act .down div{
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    
+}
+.sec1 .container .act .right-act .down div a{
+    height: 100%;
+    width: 100%;
+}
+.sec1 .container .act .right-act .down img{
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+}
+
+
+
+/* *********    styles pour la sec2  ********* */
+.sec2{
+    height: 60vh;
+    border: 1px solid red;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.sec2 .container{
+    height: 100%;
+    width: 90%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    justify-content: center;
+}
+.sec2 .container .head{
+    height: 10%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec2 .container .head p:first-child{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* ************caroussel************ */
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+} */
+.carousel-container {
+    width: 100%;
+    height: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid orangered;
+    margin-top: 20px;
+}
+.carousel-container-resp {
+  display: none;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-slide {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+}
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-slide:hover .overlay {
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+.overlay span {
+    color: white;
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.indicator {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.indicator.active {
+    background-color: #007bff;
+}
+.control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    z-index: 10;
+}
+.control.prev {
+    left: 10px;
+}
+.control.next {
+    right: 10px;
+}
+/* ******* fin du caroussel********* */
+/* .sec2 .container .foot{
+    height: 10%;
+    width: 100%;
+    border: 1px solid black;
+}  
+ */
+/* **********  cacher la section responsive *********** */
+.act-resp{
+    display: none ;
+}
+
+
+
+/* ************* */
+/* ******** Style pour la sec3********* */
+
+.sec3{
+    height: 70vh ;
+    border: 2px solid green;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec3 .container-sec3{
+    height: 80%;
+    width: 90%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sec3 .container-sec3 .head-sec3{
+    height: 15%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+.sec3 .container-sec3 .main-sec3{
+    height: 85%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    gap: 15px;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3 ,.sec3 .container-sec3 .main-sec3 .right-sec3{
+    height: 100%;
+    width: 50%;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .l-sec3{
+    height: 100%;
+    width: 45%;
+    border: 1px solid red;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .r-sec3{
+    height: 100%;
+    width: 55%;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #45ac23;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .r-sec3 .container{
+    height: 80%;
+    width: 75%;
+    border: 1px solid green;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .r-sec3 .container div{
+    height: 40%;
+    width: 100%;
+    border: 1px solid green;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .r-sec3 .container p:first-child{
+    font-size: 22px;
+    color: white;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .r-sec3 .container p:nth-of-type(2){
+    font-size: 18px;
+    color: white;
+    display: block;
+    width: 100%;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .r-sec3 .container button{
+    background-color: #45ac23;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    height: 15%;
+    width: 45%;
+    margin-top: 5px;
+    
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .r-sec3 .container a{
+   display: block;
+   width: 100%;
+   height: 100%;
+   text-decoration: none;
+   color: white;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec3 .container-sec3 .main-sec3 .left-sec3  .logo-sec3{
+    position: absolute;
+    height: 25%;
+    width: 20%;
+    border: 1px solid green;
+    left: 35%;
+    top: 35%;
+}
+/* ******************* */
+.sec3 .container-sec3 .main-sec3 .right-sec3  .l-sec3{
+    height: 100%;
+    width: 45%;
+    border: 1px solid red;
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .r-sec3{
+    height: 100%;
+    width: 55%;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #005baa;
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .r-sec3 .container{
+    height: 80%;
+    width: 75%;
+    border: 1px solid green;
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .r-sec3 .container div{
+    height: 50%;
+    width: 100%;
+    border: 1px solid green;
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .r-sec3 .container p:first-child{
+    font-size: 22px;
+    color: white;
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .r-sec3 .container p:nth-of-type(2){
+    font-size: 18px;
+    color: white;
+    display: block;
+    width: 100%;
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .r-sec3 .container button{
+    background-color: #005baa;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    height: 15%;
+    width: 45%;
+    margin-top: 5px;
+    
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .r-sec3 .container a{
+   display: block;
+   width: 100%;
+   height: 100%;
+   text-decoration: none;
+   color: white;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec3 .container-sec3 .main-sec3 .right-sec3  .logo-sec3{
+    position: absolute;
+    height: 25%;
+    width: 20%;
+    border: 1px solid green;
+    left: 35%;
+    top: 35%;
+}
+
+/* ******** styles pour le footer ********** */
+footer{
+    height: 40vh;
+    border: 2px solid black;
+}
+
+footer .up-footer{
+    height: 80%;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .up-footer .up-footer-main{
+    height: 80%;
+    width: 85%;
+    border: 1px solid black;
+    display: flex;
+}
+footer .up-footer .up-footer-main .logo-footer , footer .up-footer .up-footer-main .logo-footer ~ div{
+    height: 100%;
+    width: 25%;
+    border: 1px solid red;
+}
+footer .up-footer .up-footer-main .logo-footer{
+    display: flex;
+    justify-content: center;
+}
+footer .up-footer .up-footer-main .logo-footer div{
+    height: 60%;
+    width: 80%;
+    border: 1px solid black;
+}
+/* ****** texte1 ******** */
+footer .up-footer .up-footer-main .texte1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .up-footer .up-footer-main .texte1 p{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+footer .up-footer .up-footer-main .texte1 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .up-footer .up-footer-main .texte1 ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+/* ****** texte2 ******** */
+footer .up-footer .up-footer-main .texte2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .up-footer .up-footer-main .texte2 p{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+footer .up-footer .up-footer-main .texte2 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .up-footer .up-footer-main .texte2 ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+/* *********  rs   ************** */
+footer .up-footer .up-footer-main .rs{
+    width:13%;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 5px    ;
+}
+footer .up-footer .up-footer-main .rs{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+footer .up-footer .up-footer-main .rs .rs-logo{
+    height: 40%;
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center ;
+    gap: 5px;
+}
+footer .up-footer .up-footer-main .rs .rs-logo div{
+    width: 45px;
+    height: 45px;
+    border: 1px solid white;
+    border-radius: 50%; 
+}
+footer .up-footer .up-footer-main .rs .rs-logo div:nth-of-type(1){
+    background-color: #1977f3;
+}
+footer .up-footer .up-footer-main .rs .rs-logo div:nth-of-type(2){
+    background: linear-gradient(to bottom, #f7dc6f,#fca461,#e95f5a, #bc2a8d, #7a288a);
+}
+footer .up-footer .up-footer-main .rs .rs-logo div a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+footer .up-footer .up-footer-main .rs .rs-logo div img{
+    height: 50%;
+    width: 50%;
+}
+
+/* ************************* */
+footer .down-footer{
+    height: 20%;
+    background-color:#005baa ;
+    display: flex;
+    justify-content: center;
+}
+footer .down-footer .down-footer-main{
+    height: 100%;
+    width: 70%;
+    border: 1px solid yellow;
+    display: flex;
+}
+footer .down-footer .down-footer-main .left-down{
+    height: 100%;
+    width: 40%;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .down-footer .down-footer-main .left-down a{
+   text-decoration: none;
+   color: white;
+   font-size: 12px;
+}
+footer .down-footer .down-footer-main .right-down{
+    height: 100%;
+    width: 60%;
+    border: 1px solid yellow;
+    color: white;
+    display: flex;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
+}
+footer .down-footer .down-footer-main .right-down a{
+    text-decoration: none;
+    color: white;
+}
+/************** fin du footer ***********  */

@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*  ***************  styles pour le header */
+header{
+    border: 1px solid red;
+    height: 25vh;
+    position: relative; /*  */
+}
+header .up{
+    border: 1px solid blue;
+    height: 6vh;    
+    background-color: #005baa;
+    transition: opacity 0.3s ease-in-out;
+}
+header .up.hidden{
+    opacity: 0;
+}
+
+header .up .container{
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+header .up .container .icons{
+    width:13%;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px    ;
+}
+
+header .up .container .icons div{
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    
+}
+header .up .container .icons div a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header .up .container .icons div img{
+    height: 60%;
+    width: 60%;
+}
+header .up .container p{
+    color: white;
+    font-size: 0.8rem;
+    margin-left: 10rem;
+}
+
+
+.main{
+    border: 1px solid blue;
+    height: 19vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;/*  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+
+}
+.main .menu{
+    width: 20%;
+    height: 60%;
+    display: flex;
+    
+}
+.main .croix{
+    width: 20%;
+    height: 60%;
+    display: none;
+    
+}
+.main.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.main .container{
+    border: 1px solid black;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+   
+}
+.main .container .logo{
+    /* border: 1px solid red; */
+    width: 20%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 64px;
+}
+.main .container .logoresp{
+    /* border: 1px solid red; */
+    display: none;
+}
+.main .container .logo a{
+    height: 100%;
+    width: 100%;
+}
+.main .container .logo img{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+}
+.main .container ul{
+    /* border: 1px solid red; */
+    width: 55%;
+    height: 60%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+.main .container ul li{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* ***** card descendant ******* */
+.main .container ul .l1 ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f3f3f3;
+    /* border: 1px solid #ddd; */
+    width: 100%;
+    height: 300%;
+    transition: display 0.1s ease-in-out  ; 
+}
+.main .container ul .l1 ul .liste a{
+    text-decoration: none;
+    color: black ;
+}
+.main .container ul .l1:hover ul{
+    display: flex;
+    flex-direction: column;  
+    transition-delay: 0.3s;
+}
+.main .container ul .l1:hover ul li{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.main .container ul .l1:hover ul .liste:hover{
+    background-color: white; 
+}
+.main .container ul .l1:hover ul .liste:hover a{
+    color: #185BAA;
+}
+/* ****************************** */
+.main .container ul .l2 ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f3f3f3;
+   /*  border: 1px solid #ddd; */
+    width: 100%;
+    height: 700%;
+    transition: display 0.1s ease-in-out  ; 
+}
+.main .container ul .l2 ul .liste a{
+    text-decoration: none;
+    color: black ;
+}
+.main .container ul .l2:hover ul{
+    display: flex;
+    flex-direction: column;  
+    transition-delay: 0.3s;
+}
+.main .container ul .l2:hover ul li{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.main .container ul .l2:hover ul .liste:hover{
+    background-color: white; 
+}
+.main .container ul .l2:hover ul .liste:hover a{
+    color: #185BAA;
+}
+/* ****************************** */
+.main .container ul .l3 ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f3f3f3;
+   /*  border: 1px solid #ddd; */
+    width: 100%;
+    height: 200%;
+    transition: display 0.1s ease-in-out  ; 
+}
+.main .container ul .l3 ul .liste a{
+    text-decoration: none;
+    color: black ;
+}
+.main .container ul .l3:hover ul{
+    display: flex;
+    flex-direction: column;  
+    transition-delay: 0.3s;
+}
+.main .container ul .l3:hover ul li{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.main .container ul .l3:hover ul .liste:hover{
+    background-color: white; 
+}
+.main .container ul .l3 :hover ul .liste:hover a{
+    color: #185BAA;
+}
+/* ****************************** */
+/*  ******** fin card descendant ********* */
+.main .container ul .c1 a{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .container ul .c1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: #005baa;
+    transition: width 0.3s ease-in-out;
+}
+.main .container ul .c1:hover::after{
+    width: 100%;
+    
+}
+.main .container ul .c1:hover a{
+    color:#185BAA ;
+}
+
+.main .container .recherche{
+    border: 1px solid red;
+    width: 15%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.main .container .recherche .container{
+    border: 1px solid gray;
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+    display: flex;
+}
+.main .container .recherche .container .loupe{
+    border: 1px solid blue;
+    width: 17%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.main .container .recherche .container .loupe img{
+    width: 50%;
+    height: 50%;
+}
+.main .container .recherche .container .input{
+    border: 1px solid red;
+    width: 83%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+}
+.main .container .recherche .container .input input{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+}
+.main .container .loupe-r{
+    border: 1px solid red;
+    width: 15%;
+    height: 60%;
+    display: none;
+}
+/*  ************  fin du style pour le header ************ */
